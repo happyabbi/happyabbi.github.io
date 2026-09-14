@@ -10,7 +10,7 @@
       --ink:#192238; --muted:#6b7280; --line:#e7eaf1; --paper:#ffffff;
       --bg:#f4f7fb; --blue:#3567e8; --blue-soft:#edf3ff; --purple:#7657d6;
       --orange:#f59e0b; --orange-soft:#fff7e8; --green:#2d9d78; --green-soft:#ecfaf5;
-      --pink:#e8658c; --pink-soft:#fff1f6; --gray-soft:#f5f6f8;
+      --pink:#e8658c; --pink-soft:#fff1f6; --gray-soft:#f5f6f8; --teal:#0f8b8d; --teal-soft:#e9f8f8;
       --shadow:0 14px 40px rgba(25,34,56,.08);
     }
     *{box-sizing:border-box}
@@ -39,7 +39,7 @@
 
     .legend{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
     .legend span{font-size:12px;font-weight:800;border-radius:999px;padding:6px 10px}
-    .lg-school{background:var(--blue-soft);color:var(--blue)}.lg-eighth{background:#f1edff;color:var(--purple)}.lg-night{background:var(--orange-soft);color:#b56a00}.lg-camp{background:var(--green-soft);color:var(--green)}.lg-rest{background:var(--gray-soft);color:#667085}
+    .lg-school{background:var(--blue-soft);color:var(--blue)}.lg-eighth{background:#f1edff;color:var(--purple)}.lg-night{background:var(--orange-soft);color:#b56a00}.lg-camp{background:var(--green-soft);color:var(--green)}.lg-tutor{background:var(--teal-soft);color:var(--teal)}.lg-rest{background:var(--gray-soft);color:#667085}
 
     .week-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}
     .day{min-width:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;transition:.2s ease;position:relative}
@@ -50,7 +50,7 @@
     .blocks{padding:10px;display:flex;flex-direction:column;gap:8px;min-height:250px}
     .block{border-radius:13px;padding:10px 10px 9px;line-height:1.35;border:1px solid transparent}
     .block time{display:block;font-size:11px;font-weight:900;opacity:.75;margin-bottom:3px}.block b{display:block;font-size:13px}.block small{display:block;font-size:11px;margin-top:3px;opacity:.78;line-height:1.45}
-    .school{background:var(--blue-soft);color:#2e5ec7}.eighth{background:#f3efff;color:#6648bb}.night{background:var(--orange-soft);color:#9a5c00;border-style:dashed;border-color:#f6cb7a}.camp{background:var(--green-soft);color:#237b60}.rest{background:var(--gray-soft);color:#596274}.family{background:var(--pink-soft);color:#bd476b}
+    .school{background:var(--blue-soft);color:#2e5ec7}.eighth{background:#f3efff;color:#6648bb}.night{background:var(--orange-soft);color:#9a5c00;border-style:dashed;border-color:#f6cb7a}.camp{background:var(--green-soft);color:#237b60}.tutor{background:var(--teal-soft);color:#087274;border-color:#bfe8e8}.conflict{background:#fff2f2;color:#b42318;border-color:#f4c7c7;border-style:dashed}.rest{background:var(--gray-soft);color:#596274}.family{background:var(--pink-soft);color:#bd476b}
     .optional{display:inline-block;margin-top:7px;font-size:10px;font-weight:900;background:rgba(255,255,255,.68);padding:3px 6px;border-radius:999px}
 
     .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
@@ -93,18 +93,18 @@
 
     <section class="quick" aria-label="固定行程重點">
       <div class="quick-card"><div class="icon">🏫</div><strong>週一～週五</strong><span>正常上課＋第八節輔導</span></div>
-      <div class="quick-card"><div class="icon">🌙</div><strong>夜間解題班</strong><span>17:30–20:30・自由報名</span></div>
-      <div class="quick-card"><div class="icon">🧪</div><strong>週六營隊</strong><span>一般 07:30–11:55</span></div>
-      <div class="quick-card"><div class="icon">🌿</div><strong>週日</strong><span>沒有固定校內行程</span></div>
+      <div class="quick-card"><div class="icon">➗</div><strong>週三 19:00–21:00</strong><span>數學補習</span></div>
+      <div class="quick-card"><div class="icon">🔤</div><strong>週四晚上</strong><span>英文補習・時間待補</span></div>
+      <div class="quick-card"><div class="icon">🧪</div><strong>週六</strong><span>上午營隊＋16:00–19:00 自然補習</span></div>
     </section>
 
     <section class="panel">
       <div class="panel-head">
-        <div><h2>一週總覽</h2><p class="sub">夜間解題班用虛線表示：是「可以參加」，不是每天一定要上。</p></div>
+        <div><h2>一週總覽</h2><p class="sub">固定補習先保留；夜間解題班是「可以參加」，不是每天一定要上。</p></div>
         <button class="print-btn" onclick="window.print()">列印 / 存 PDF</button>
       </div>
       <div class="legend">
-        <span class="lg-school">白天上課</span><span class="lg-eighth">第八節</span><span class="lg-night">夜間解題（選擇）</span><span class="lg-camp">週六營隊</span><span class="lg-rest">休息</span>
+        <span class="lg-school">白天上課</span><span class="lg-eighth">第八節</span><span class="lg-tutor">固定補習</span><span class="lg-night">夜間解題（選擇）</span><span class="lg-camp">週六營隊</span><span class="lg-rest">休息</span>
       </div>
       <div class="week-grid" id="weekGrid">
         <article class="day" data-day="1">
@@ -128,7 +128,8 @@
           <div class="blocks">
             <div class="block school"><time>白天</time><b>正常課程</b><small>依學校課表上課</small></div>
             <div class="block eighth"><time>放學後</time><b>第八節輔導課</b><small>國英數自然社會等</small></div>
-            <div class="block night"><time>17:30–20:30</time><b>夜間解題班</b><small>17:00 起可在校用晚餐</small><span class="optional">選擇性參加</span></div>
+            <div class="block tutor"><time>19:00–21:00</time><b>數學補習</b><small>固定行程</small></div>
+            <div class="block conflict"><time>17:30–20:30</time><b>夜間解題班會衝突</b><small>19:00 起與數學補習重疊，不適合排完整時段。</small></div>
           </div>
         </article>
         <article class="day" data-day="4">
@@ -136,7 +137,8 @@
           <div class="blocks">
             <div class="block school"><time>白天</time><b>正常課程</b><small>依學校課表上課</small></div>
             <div class="block eighth"><time>放學後</time><b>第八節輔導課</b><small>國英數自然社會等</small></div>
-            <div class="block night"><time>17:30–20:30</time><b>夜間解題班</b><small>17:00 起可在校用晚餐</small><span class="optional">選擇性參加</span></div>
+            <div class="block tutor"><time>晚上</time><b>英文補習</b><small>固定行程・確切時間待補</small></div>
+            <div class="block night"><time>17:30–20:30</time><b>夜間解題班</b><small>若與英文補習撞時間，就不排這天。</small><span class="optional">需看英文時間</span></div>
           </div>
         </article>
         <article class="day" data-day="5">
@@ -151,7 +153,9 @@
           <div class="day-head"><strong>週六</strong><span class="date-tag">SAT</span></div>
           <div class="blocks">
             <div class="block camp"><time>07:30–11:55</time><b>國一誠週六營隊</b><small>9/19～12/12<br>部分日期時間不同，見下方</small></div>
-            <div class="block rest"><time>下午 / 晚上</time><b>自由時間</b><small>休息、家庭活動、整理功課</small></div>
+            <div class="block rest"><time>12:00–16:00</time><b>午餐・休息・整理功課</b><small>下午先保留喘息時間</small></div>
+            <div class="block tutor"><time>16:00–19:00</time><b>自然補習</b><small>固定行程</small></div>
+            <div class="block rest"><time>19:00 後</time><b>自由時間</b><small>晚餐、休息、家庭活動</small></div>
           </div>
         </article>
         <article class="day" data-day="0">
@@ -195,7 +199,7 @@
           </div>
         </div>
       </div>
-      <div class="note"><b>小提醒：</b>「夜間解題班」是自由報名，網站故意用虛線橘色顯示，避免為城看成每天都一定要留下來。</div>
+      <div class="note"><b>小提醒：</b>固定補習要先保留：週三 19:00–21:00 數學、週四晚上英文、週六 16:00–19:00 自然。夜間解題班是自由報名；週三已與數學補習重疊，週四則等英文補習確切時間後再決定。</div>
     </section>
 
     <footer>依學校 115 學年度第一學期通知整理｜若學校另有最新公告，以最新公告為準。</footer>
