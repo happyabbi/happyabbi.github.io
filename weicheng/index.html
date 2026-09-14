@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#3567E8" />
+  <title>為城｜一週行程表</title>
+  <style>
+    :root{
+      --ink:#192238; --muted:#6b7280; --line:#e7eaf1; --paper:#ffffff;
+      --bg:#f4f7fb; --blue:#3567e8; --blue-soft:#edf3ff; --purple:#7657d6;
+      --orange:#f59e0b; --orange-soft:#fff7e8; --green:#2d9d78; --green-soft:#ecfaf5;
+      --pink:#e8658c; --pink-soft:#fff1f6; --gray-soft:#f5f6f8;
+      --shadow:0 14px 40px rgba(25,34,56,.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC",Arial,sans-serif}
+    .page{max-width:1220px;margin:0 auto;padding:24px 16px 56px}
+
+    .hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#2d56bd 0%,#3f70ee 58%,#688cf4 100%);color:#fff;border-radius:30px;padding:28px 30px 26px;box-shadow:var(--shadow)}
+    .hero:before,.hero:after{content:"";position:absolute;border-radius:999px;background:rgba(255,255,255,.09)}
+    .hero:before{width:230px;height:230px;right:-75px;top:-90px}.hero:after{width:130px;height:130px;right:120px;bottom:-75px}
+    .hero-row{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;position:relative;z-index:1}
+    .eyebrow{font-size:13px;font-weight:800;letter-spacing:.12em;opacity:.78;margin-bottom:7px}
+    h1{font-size:clamp(30px,5vw,50px);margin:0;letter-spacing:.02em;line-height:1.12}
+    .hero p{margin:10px 0 0;opacity:.9;line-height:1.7;font-size:15px}
+    .today-chip{flex:0 0 auto;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(8px);padding:12px 16px;border-radius:18px;min-width:150px;text-align:center}
+    .today-chip small{display:block;opacity:.78;margin-bottom:2px}.today-chip strong{font-size:20px}
+
+    .quick{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+    .quick-card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:16px 17px;box-shadow:0 8px 28px rgba(25,34,56,.05)}
+    .quick-card .icon{font-size:22px}.quick-card strong{display:block;margin-top:7px;font-size:16px}.quick-card span{display:block;margin-top:4px;color:var(--muted);font-size:13px;line-height:1.45}
+
+    .panel{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:22px;margin-top:16px;box-shadow:var(--shadow)}
+    .panel-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:16px}
+    .panel h2{margin:0;font-size:22px}.panel .sub{margin:4px 0 0;color:var(--muted);font-size:13px;line-height:1.5}
+    .print-btn{border:1px solid var(--line);background:white;color:var(--ink);font:inherit;font-weight:800;padding:10px 13px;border-radius:12px;cursor:pointer}
+
+    .legend{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+    .legend span{font-size:12px;font-weight:800;border-radius:999px;padding:6px 10px}
+    .lg-school{background:var(--blue-soft);color:var(--blue)}.lg-eighth{background:#f1edff;color:var(--purple)}.lg-night{background:var(--orange-soft);color:#b56a00}.lg-camp{background:var(--green-soft);color:var(--green)}.lg-rest{background:var(--gray-soft);color:#667085}
+
+    .week-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}
+    .day{min-width:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;transition:.2s ease;position:relative}
+    .day.is-today{outline:3px solid rgba(53,103,232,.18);border-color:#9cb6f6;transform:translateY(-2px)}
+    .day-head{padding:13px 13px 11px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:8px}
+    .day-head strong{font-size:16px}.date-tag{font-size:11px;background:#eff2f7;color:#667085;border-radius:999px;padding:4px 7px;white-space:nowrap}
+    .today-tag{background:#dfe9ff;color:#2756c5;font-weight:900}
+    .blocks{padding:10px;display:flex;flex-direction:column;gap:8px;min-height:250px}
+    .block{border-radius:13px;padding:10px 10px 9px;line-height:1.35;border:1px solid transparent}
+    .block time{display:block;font-size:11px;font-weight:900;opacity:.75;margin-bottom:3px}.block b{display:block;font-size:13px}.block small{display:block;font-size:11px;margin-top:3px;opacity:.78;line-height:1.45}
+    .school{background:var(--blue-soft);color:#2e5ec7}.eighth{background:#f3efff;color:#6648bb}.night{background:var(--orange-soft);color:#9a5c00;border-style:dashed;border-color:#f6cb7a}.camp{background:var(--green-soft);color:#237b60}.rest{background:var(--gray-soft);color:#596274}.family{background:var(--pink-soft);color:#bd476b}
+    .optional{display:inline-block;margin-top:7px;font-size:10px;font-weight:900;background:rgba(255,255,255,.68);padding:3px 6px;border-radius:999px}
+
+    .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .flow-step{position:relative;border:1px solid var(--line);border-radius:17px;padding:15px 14px;background:#fff;min-height:116px}
+    .flow-step:not(:last-child):after{content:"›";position:absolute;right:-9px;top:50%;transform:translateY(-50%);width:18px;height:18px;background:#fff;border:1px solid var(--line);border-radius:999px;display:grid;place-items:center;font-size:17px;color:#98a2b3;z-index:2}
+    .flow-step .num{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;background:#eef3ff;color:var(--blue);font-weight:900;font-size:12px}.flow-step b{display:block;margin-top:9px;font-size:15px}.flow-step span{display:block;margin-top:4px;color:var(--muted);font-size:12px;line-height:1.45}
+
+    .this-week{display:grid;grid-template-columns:1.15fr .85fr;gap:14px}
+    .focus{background:linear-gradient(180deg,#f8fbff,#f4f7ff);border:1px solid #dfe8ff;border-radius:20px;padding:18px}
+    .focus h3,.dates h3{margin:0 0 11px;font-size:17px}
+    .focus-list{display:grid;gap:9px}.focus-item{display:grid;grid-template-columns:66px 1fr;gap:10px;align-items:start;background:#fff;border:1px solid #e6ebf5;border-radius:14px;padding:11px}
+    .focus-date{font-weight:900;color:var(--blue);font-size:13px}.focus-item b{font-size:14px}.focus-item small{display:block;color:var(--muted);font-size:12px;margin-top:2px;line-height:1.45}
+    .dates{border:1px solid var(--line);border-radius:20px;padding:18px}
+    .date-list{display:grid;gap:8px}.date-row{display:grid;grid-template-columns:62px 1fr;gap:9px;align-items:center;padding:8px 0;border-bottom:1px dashed var(--line)}.date-row:last-child{border-bottom:0}.date-row strong{color:var(--green);font-size:13px}.date-row span{font-size:13px;line-height:1.4}
+
+    .note{margin-top:14px;background:#fffaf0;border:1px solid #fde1a8;border-radius:15px;padding:13px 14px;color:#7b4c00;font-size:13px;line-height:1.6}
+    footer{text-align:center;color:#98a2b3;font-size:12px;margin-top:18px}
+
+    @media(max-width:1000px){.week-grid{grid-template-columns:repeat(4,1fr)}.quick{grid-template-columns:repeat(2,1fr)}.this-week{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,1fr)}.flow-step:nth-child(2):after{display:none}}
+    @media(max-width:650px){
+      .page{padding:12px 10px 38px}.hero{border-radius:22px;padding:22px 18px}.hero-row{align-items:flex-start}.today-chip{display:none}.quick{gap:8px}.quick-card{padding:13px;border-radius:16px}.quick-card .icon{font-size:19px}.quick-card strong{font-size:14px}.quick-card span{font-size:11px}.panel{padding:15px;border-radius:20px}.panel-head{align-items:flex-start}.panel h2{font-size:20px}
+      .week-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding:3px 2px 10px;gap:10px}.day{flex:0 0 78%;scroll-snap-align:center}.blocks{min-height:0}.day.is-today{transform:none}
+      .flow{grid-template-columns:1fr}.flow-step:not(:last-child):after{display:none}.focus-item{grid-template-columns:56px 1fr}.print-btn{display:none}
+    }
+    @media print{body{background:#fff}.page{max-width:none;padding:0}.hero,.panel,.quick-card{box-shadow:none}.hero{border-radius:18px}.quick{grid-template-columns:repeat(4,1fr)}.week-grid{grid-template-columns:repeat(7,1fr)}.blocks{min-height:240px}.day{break-inside:avoid}.flow{grid-template-columns:repeat(4,1fr)}.this-week{grid-template-columns:1.15fr .85fr}.print-btn{display:none}footer{display:none}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="hero-row">
+        <div>
+          <div class="eyebrow">115 學年度・第一學期</div>
+          <h1>為城的一週行程</h1>
+          <p>把每天「要去哪裡、幾點到幾點」放在同一張表。<br>先看行程，再決定晚上要不要留校。</p>
+        </div>
+        <div class="today-chip"><small>今天</small><strong id="todayText">—</strong></div>
+      </div>
+    </section>
+
+    <section class="quick" aria-label="固定行程重點">
+      <div class="quick-card"><div class="icon">🏫</div><strong>週一～週五</strong><span>正常上課＋第八節輔導</span></div>
+      <div class="quick-card"><div class="icon">🌙</div><strong>夜間解題班</strong><span>17:30–20:30・自由報名</span></div>
+      <div class="quick-card"><div class="icon">🧪</div><strong>週六營隊</strong><span>一般 07:30–11:55</span></div>
+      <div class="quick-card"><div class="icon">🌿</div><strong>週日</strong><span>沒有固定校內行程</span></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div><h2>一週總覽</h2><p class="sub">夜間解題班用虛線表示：是「可以參加」，不是每天一定要上。</p></div>
+        <button class="print-btn" onclick="window.print()">列印 / 存 PDF</button>
+      </div>
+      <div class="legend">
+        <span class="lg-school">白天上課</span><span class="lg-eighth">第八節</span><span class="lg-night">夜間解題（選擇）</span><span class="lg-camp">週六營隊</span><span class="lg-rest">休息</span>
+      </div>
+      <div class="week-grid" id="weekGrid">
+        <article class="day" data-day="1">
+          <div class="day-head"><strong>週一</strong><span class="date-tag">MON</span></div>
+          <div class="blocks">
+            <div class="block school"><time>白天</time><b>正常課程</b><small>依學校課表上課</small></div>
+            <div class="block eighth"><time>放學後</time><b>第八節輔導課</b><small>國英數自然社會等</small></div>
+            <div class="block night"><time>17:30–20:30</time><b>夜間解題班</b><small>17:00 起可在校用晚餐</small><span class="optional">選擇性參加</span></div>
+          </div>
+        </article>
+        <article class="day" data-day="2">
+          <div class="day-head"><strong>週二</strong><span class="date-tag">TUE</span></div>
+          <div class="blocks">
+            <div class="block school"><time>白天</time><b>正常課程</b><small>依學校課表上課</small></div>
+            <div class="block eighth"><time>放學後</time><b>第八節輔導課</b><small>國英數自然社會等</small></div>
+            <div class="block night"><time>17:30–20:30</time><b>夜間解題班</b><small>17:00 起可在校用晚餐</small><span class="optional">選擇性參加</span></div>
+          </div>
+        </article>
+        <article class="day" data-day="3">
+          <div class="day-head"><strong>週三</strong><span class="date-tag">WED</span></div>
+          <div class="blocks">
+            <div class="block school"><time>白天</time><b>正常課程</b><small>依學校課表上課</small></div>
+            <div class="block eighth"><time>放學後</time><b>第八節輔導課</b><small>國英數自然社會等</small></div>
+            <div class="block night"><time>17:30–20:30</time><b>夜間解題班</b><small>17:00 起可在校用晚餐</small><span class="optional">選擇性參加</span></div>
+          </div>
+        </article>
+        <article class="day" data-day="4">
+          <div class="day-head"><strong>週四</strong><span class="date-tag">THU</span></div>
+          <div class="blocks">
+            <div class="block school"><time>白天</time><b>正常課程</b><small>依學校課表上課</small></div>
+            <div class="block eighth"><time>放學後</time><b>第八節輔導課</b><small>國英數自然社會等</small></div>
+            <div class="block night"><time>17:30–20:30</time><b>夜間解題班</b><small>17:00 起可在校用晚餐</small><span class="optional">選擇性參加</span></div>
+          </div>
+        </article>
+        <article class="day" data-day="5">
+          <div class="day-head"><strong>週五</strong><span class="date-tag">FRI</span></div>
+          <div class="blocks">
+            <div class="block school"><time>白天</time><b>正常課程</b><small>依學校課表上課</small></div>
+            <div class="block eighth"><time>放學後</time><b>第八節輔導課</b><small>國英數自然社會等</small></div>
+            <div class="block night"><time>17:30–20:30</time><b>夜間解題班</b><small>17:00 起可在校用晚餐</small><span class="optional">選擇性參加</span></div>
+          </div>
+        </article>
+        <article class="day" data-day="6">
+          <div class="day-head"><strong>週六</strong><span class="date-tag">SAT</span></div>
+          <div class="blocks">
+            <div class="block camp"><time>07:30–11:55</time><b>國一誠週六營隊</b><small>9/19～12/12<br>部分日期時間不同，見下方</small></div>
+            <div class="block rest"><time>下午 / 晚上</time><b>自由時間</b><small>休息、家庭活動、整理功課</small></div>
+          </div>
+        </article>
+        <article class="day" data-day="0">
+          <div class="day-head"><strong>週日</strong><span class="date-tag">SUN</span></div>
+          <div class="blocks">
+            <div class="block rest"><time>全天</time><b>沒有固定校內行程</b><small>留給休息、家庭與下週準備</small></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><div><h2>如果今天有留夜間班</h2><p class="sub">為城只要記住這 4 個時間點。</p></div></div>
+      <div class="flow">
+        <div class="flow-step"><div class="num">1</div><b>第八節結束</b><span>留在學校，不用先回家。</span></div>
+        <div class="flow-step"><div class="num">2</div><b>17:00–17:30 晚餐</b><span>在校用餐，準備晚上的解題班。</span></div>
+        <div class="flow-step"><div class="num">3</div><b>17:30–20:30 解題</b><span>夜間解題班正式時段。</span></div>
+        <div class="flow-step"><div class="num">4</div><b>20:30 回家</b><span>家長接送；搭乘校車者依學校安排。</span></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><div><h2>這週先看這裡</h2><p class="sub">以 2026/09/14 這一週為例，剛好是新行程開始的第一週。</p></div></div>
+      <div class="this-week">
+        <div class="focus">
+          <h3>本週重點</h3>
+          <div class="focus-list">
+            <div class="focus-item"><div class="focus-date">9/14 一</div><div><b>第八節輔導課開始</b><small>週一到週五都有第八節。</small></div></div>
+            <div class="focus-item"><div class="focus-date">9/15 二</div><div><b>國一親師座談</b><small>18:30–20:30，這是家長活動，不是為城固定課程。</small></div></div>
+            <div class="focus-item"><div class="focus-date">9/19 六</div><div><b>週六營隊開始</b><small>一般時段 07:30–11:55。</small></div></div>
+          </div>
+        </div>
+        <div class="dates">
+          <h3>週六特殊日期</h3>
+          <div class="date-list">
+            <div class="date-row"><strong>10/17</strong><span>AI 人文講座・09:05–11:55</span></div>
+            <div class="date-row"><strong>10/31</strong><span>基因定序實驗・08:00–11:55</span></div>
+            <div class="date-row"><strong>11/07</strong><span>蜂蟻概論・09:05–11:55</span></div>
+            <div class="date-row"><strong>11/14</strong><span>電解質實驗・08:00–11:55</span></div>
+            <div class="date-row"><strong>12/19</strong><span>基隆海科館・08:00–17:00</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="note"><b>小提醒：</b>「夜間解題班」是自由報名，網站故意用虛線橘色顯示，避免為城看成每天都一定要留下來。</div>
+    </section>
+
+    <footer>依學校 115 學年度第一學期通知整理｜若學校另有最新公告，以最新公告為準。</footer>
+  </main>
+
+  <script>
+    const d = new Date();
+    const weekNames = ['週日','週一','週二','週三','週四','週五','週六'];
+    document.getElementById('todayText').textContent = `${d.getMonth()+1}/${d.getDate()} ${weekNames[d.getDay()]}`;
+    const todayCard = document.querySelector(`[data-day="${d.getDay()}"]`);
+    if(todayCard){
+      todayCard.classList.add('is-today');
+      const tag = todayCard.querySelector('.date-tag');
+      if(tag){ tag.textContent='今天'; tag.classList.add('today-tag'); }
+      if(window.innerWidth < 650){ setTimeout(()=>todayCard.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'}),250); }
+    }
+  </script>
+</body>
+</html>
