@@ -33,6 +33,25 @@
     .focus{background:linear-gradient(150deg,#fff,#f6efe3);border:1px solid #dfd4c2;border-radius:28px;padding:38px;display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:14px;align-items:center}.focus .item{text-align:center}.focus .item b{display:block;font-size:1.5rem;font-family:"Noto Serif TC",serif}.focus .item small{color:var(--muted)}.arrow{font-size:2rem;color:var(--gold)}
     .application{display:grid;grid-template-columns:1fr 1fr;gap:22px}.app-card{background:#fff;border-radius:20px;border:1px solid var(--line);padding:28px}.app-card h3{margin-top:0}.app-card ul{margin-bottom:0;padding-left:1.2em}.app-card li{margin:8px 0;color:var(--muted)}
     .prayer{background:#172a45;color:#fff;border-radius:28px;padding:36px}.prayer h3{font-size:1.6rem;margin-top:0}.prayer p{color:#d9e2ef;margin-bottom:0}.prayer .quote{font-family:"Noto Serif TC",serif;font-size:1.25rem;color:#f5ddb0;border-left:3px solid var(--gold);padding-left:18px;margin-top:22px}
+
+    .study-tools{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px}
+    .study-tools button{appearance:none;border:1px solid var(--line);background:#fff;color:var(--navy);font-weight:800;padding:9px 14px;border-radius:999px;cursor:pointer}
+    .study-tools button:hover{border-color:var(--gold);background:#fffaf0}
+    .study-list{display:grid;gap:14px}
+    details.study{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 5px 18px rgba(20,29,45,.035)}
+    details.study[open]{box-shadow:var(--shadow);border-color:#d9c9a7}
+    details.study summary{list-style:none;cursor:pointer;padding:21px 24px;display:grid;grid-template-columns:48px 1fr auto;gap:14px;align-items:center}
+    details.study summary::-webkit-details-marker{display:none}
+    .study-icon{width:44px;height:44px;display:grid;place-items:center;background:var(--soft);border-radius:13px;font-size:1.3rem}
+    .study-title b{display:block;font-size:1.08rem}.study-title span{display:block;color:#8a6a32;font-size:.82rem;font-weight:800;margin-top:2px}
+    .chev{font-size:1.25rem;color:var(--gold);transition:.2s}details[open] .chev{transform:rotate(180deg)}
+    .study-body{border-top:1px solid var(--line);padding:24px;display:grid;grid-template-columns:1.15fr .85fr;gap:20px;background:linear-gradient(180deg,#fff,#fcfaf6)}
+    .outline-box,.practice-box{border-radius:16px;padding:20px}.outline-box{background:#f7f3eb}.practice-box{background:#eef3ef}
+    .outline-box h4,.practice-box h4{margin:0 0 10px;font-size:1rem}.outline-box ul{padding-left:1.2em;margin:0}.outline-box li{margin:7px 0}
+    .scripture{margin-top:15px;padding:14px 16px;border-left:3px solid var(--gold);background:#fff;border-radius:0 12px 12px 0;color:var(--muted);font-size:.93rem}
+    .practice-q{font-weight:800;margin-bottom:8px}.practice-box p{margin:7px 0;color:#405045}.mini-prayer{margin-top:14px;padding-top:13px;border-top:1px dashed #bfcdbf;font-family:"Noto Serif TC",serif;color:#2f4434}
+    .study-index{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}.study-index a{text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 9px;font-size:.84rem;font-weight:700}.study-index a:hover{border-color:var(--gold)}
+
     footer{padding:40px 0 60px;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)} footer a{color:var(--navy);font-weight:700}
     .source-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}.source-links a{text-decoration:none;background:#fff;border:1px solid var(--line);padding:8px 10px;border-radius:10px}
     @media(max-width:850px){.journey{grid-template-columns:1fr 1fr}.step:not(:last-child):after{display:none}.aspects{grid-template-columns:1fr 1fr}.three-lines{grid-template-columns:1fr}.focus{grid-template-columns:1fr}.arrow{transform:rotate(90deg);text-align:center}.application{grid-template-columns:1fr}.section-head{grid-template-columns:65px 1fr}}
@@ -51,7 +70,7 @@
   </header>
 
   <nav class="topnav"><div class="wrap">
-    <a href="#burden">中心負擔</a><a href="#journey">救恩路線</a><a href="#aspects">15 個面向</a><a href="#lines">三條主線</a><a href="#focus">分享重點</a><a href="#application">實際應用</a>
+    <a href="#burden">中心負擔</a><a href="#journey">救恩路線</a><a href="#aspects">15 個面向</a><a href="#deep-study">深入研讀</a><a href="#lines">三條主線</a><a href="#focus">分享重點</a><a href="#application">實際應用</a>
   </div></nav>
 
   <main>
@@ -92,8 +111,96 @@
       </div>
     </div></section>
 
+
+    <section id="deep-study"><div class="wrap">
+      <div class="section-head"><div class="num">04</div><div><h2>十五個面向・深入研讀</h2><p>展開每一項，從綱目進到經文，再轉成今天可以經歷的禱告與操練。</p></div></div>
+      <div class="study-index">
+        <a href="#study-1">1 王</a><a href="#study-2">2 基督與神子</a><a href="#study-3">3 人子</a><a href="#study-4">4 施浸者</a><a href="#study-5">5 生命的光</a>
+        <a href="#study-6">6 醫生與新郎</a><a href="#study-7">7 新衣服</a><a href="#study-8">8 新酒新皮袋</a><a href="#study-9">9 牧人與莊稼主</a>
+        <a href="#study-10">10 朋友與智慧</a><a href="#study-11">11 安息</a><a href="#study-12">12 更大的約拿</a><a href="#study-13">13 餅</a><a href="#study-14">14 復活權柄</a><a href="#study-15">15 敬拜享受</a>
+      </div>
+      <div class="study-tools"><button type="button" onclick="setStudy(true)">全部展開</button><button type="button" onclick="setStudy(false)">全部收合</button></div>
+      <div class="study-list">
+
+        <details class="study" id="study-1" open>
+          <summary><div class="study-icon">👑</div><div class="study-title"><b>壹・基督是屬天的王</b><span>太 2:1–2；21:5</span></div><div class="chev">⌄</div></summary>
+          <div class="study-body"><div class="outline-box"><h4>綱目</h4><ul><li>馬太福音證明耶穌是君王，是舊約所預言的彌賽亞；祂是大衛王位合法的承繼者。</li><li>這位屬天的王不是高傲顯赫地來，乃是在溫和、謙遜、溫柔裡來。</li></ul><div class="scripture"><b>經文重點：</b>馬太從耶穌的家譜、出生到進耶路撒冷，都突出祂是王；但祂作王的樣式不是威嚇與控制，而是溫柔。</div></div><div class="practice-box"><h4>今天如何經歷？</h4><div class="practice-q">我是在「掌控局面」，還是在讓基督掌權？</div><p>工作、家庭或服事中，越有責任越容易用天然的權柄。屬天的王給我們另一條路：有權柄，卻不高傲；有立場，卻是溫柔。</p><div class="mini-prayer">主，今天在我的態度和決定裡作王，使我不靠控制人來完成事情。</div></div></div>
+        </details>
+
+        <details class="study" id="study-2">
+          <summary><div class="study-icon">✨</div><div class="study-title"><b>貳・主耶穌是基督，是活神的兒子</b><span>太 16:16、21、27</span></div><div class="chev">⌄</div></summary>
+          <div class="study-body"><div class="outline-box"><h4>綱目</h4><ul><li>「基督」意指神的受膏者，說到主的使命：藉著受死、復活、升天和再臨，完成神永遠的定旨。</li><li>「活神的兒子」說到主的身位：祂彰顯父，並成為可給我們經歷的生命供應。</li></ul><div class="scripture"><b>經文重點：</b>彼得的認識不是只看見一位好老師，而是看見主的使命與祂神聖的身位。</div></div><div class="practice-box"><h4>今天如何經歷？</h4><div class="practice-q">我只知道主「為我作了甚麼」，還是也享受「祂是誰」？</div><p>祂不只是完成工作的一位，也是我們能聯於、接受、享受的一位。</p><div class="mini-prayer">主，更多向我啟示你自己，使我不只懂真理，也在靈裡得著你。</div></div></div>
+        </details>
+
+        <details class="study" id="study-3">
+          <summary><div class="study-icon">🧍</div><div class="study-title"><b>參・基督是人子</b><span>太 8:20；11:19；13:37；16:13</span></div><div class="chev">⌄</div></summary>
+          <div class="study-body"><div class="outline-box"><h4>綱目</h4><ul><li>基督是把神的管治帶到地上的人，使神的名在地上得尊大。</li><li>為著建立諸天之國，祂站在得勝之人的地位，勝過試誘、反對和攻擊。</li></ul><div class="scripture"><b>經文重點：</b>馬太多次稱主為人子，顯出神要在「人」身上得著祂的彰顯與管治。</div></div><div class="practice-box"><h4>今天如何經歷？</h4><div class="practice-q">難處來時，我是靠情緒反應，還是站在一個正常、得勝之人的地位？</div><p>基督作人子，成為我們在人性生活裡的供應，使我們能在壓力下仍合乎神。</p><div class="mini-prayer">主，作我真正的人性，使我在壓力中仍能站住並彰顯你。</div></div></div>
+        </details>
+
+        <details class="study" id="study-4">
+          <summary><div class="study-icon">🔥</div><div class="study-title"><b>肆・基督是施浸者</b><span>太 3:11–12</span></div><div class="chev">⌄</div></summary>
+          <div class="study-body"><div class="outline-box"><h4>綱目</h4><ul><li>祂在聖靈裡的浸，基於救贖，把信祂的人帶進諸天之國。</li><li>火的浸則與審判有關，顯出祂也是按神公義施行審判的一位。</li></ul><div class="scripture"><b>經文重點：</b>受浸不只是外面的加入；在屬靈實際上，我們被帶進與三一神的聯結與國度範圍。</div></div><div class="practice-box"><h4>今天如何經歷？</h4><div class="practice-q">我今天是憑自己活，還是活在與主的聯結裡？</div><p>基督徒生活不是自己修好自己，而是從「我」轉到與主聯結的生命。</p><div class="mini-prayer">主，保守我活在與你的聯結裡，不離開你獨立行事。</div></div></div>
+        </details>
+
+        <details class="study" id="study-5">
+          <summary><div class="study-icon">💡</div><div class="study-title"><b>伍・基督是生命的光</b><span>太 4:12–16</span></div><div class="chev">⌄</div></summary>
+          <div class="study-body"><div class="outline-box"><h4>綱目</h4><ul><li>基督為著諸天之國的職事，不是憑屬地權能，乃是憑屬天的大光開始。</li><li>祂不是發起一個運動或革命，乃是作大光吸引人歸祂自己。</li></ul><div class="scripture"><b>經文重點：</b>黑暗中的人看見大光；主的臨到本身就把生命與方向帶給人。</div></div><div class="practice-box"><h4>今天如何經歷？</h4><div class="practice-q">遇到黑暗，我第一個反應是「推動事情」，還是先到主面前得光？</div><p>真正影響人，不一定靠聲量；一個活在基督光中的人，本身就有吸引力。</p><div class="mini-prayer">主，先照亮我，也使我在所在之處不製造黑暗，乃帶進生命的光。</div></div></div>
+        </details>
+
+        <details class="study" id="study-6">
+          <summary><div class="study-icon">🩺</div><div class="study-title"><b>陸・基督是醫生，也是新郎</b><span>太 9:9–15</span></div><div class="chev">⌄</div></summary>
+          <div class="study-body"><div class="outline-box"><h4>綱目</h4><ul><li>祂作醫生，醫治並點活我們，使我們重新構成為諸天之國的子民。</li><li>祂也是新郎；我們需要珍賞祂，享受與祂同在的生活。</li></ul><div class="scripture"><b>經文重點：</b>主接近稅吏和罪人，不是定罪他們，乃像醫生接近病人；同時，跟從主不是苦修，核心乃是享受新郎。</div></div><div class="practice-box"><h4>今天如何經歷？</h4><div class="practice-q">我是否願意承認自己需要被醫治？我對主還有愛的珍賞嗎？</div><p>主不是等我們變好才接近我們；祂在我們有病的地方醫治，也在愛裡吸引我們。</p><div class="mini-prayer">主，醫治我裡面的病，也恢復我對你的愛與享受。</div></div></div>
+        </details>
+
+        <details class="study" id="study-7">
+          <summary><div class="study-icon">👕</div><div class="study-title"><b>柒・基督是未漂過的布，為著作成新衣服</b><span>太 9:16；路 5:36；加 3:27</span></div><div class="chev">⌄</div></summary>
+          <div class="study-body"><div class="outline-box"><h4>綱目</h4><ul><li>從成為肉體到釘十字架，祂如同未漂過的布，不是為著修補舊人。</li><li>藉著死與復活，祂成為我們的新衣服，在神面前作我們的義，使我們蒙悅納。</li></ul><div class="scripture"><b>經文重點：</b>基督不是來補我們的舊生活；祂要成為一個全新的遮蓋與身分。</div></div><div class="practice-box"><h4>今天如何經歷？</h4><div class="practice-q">我是在努力把「舊我」補得更漂亮，還是在穿上基督？</div><p>我們站在神面前的把握，不是「今天我表現很好」，乃是基督自己作我們的義。</p><div class="mini-prayer">主，我放下自義，接受你作我的新衣服與真正的義。</div></div></div>
+        </details>
+
+        <details class="study" id="study-8">
+          <summary><div class="study-icon">🍷</div><div class="study-title"><b>捌・個人的基督是新酒，團體的基督是新皮袋</b><span>太 9:17；林前 12:12</span></div><div class="chev">⌄</div></summary>
+          <div class="study-body"><div class="outline-box"><h4>綱目</h4><ul><li>新酒象徵基督作新生命，滿有活力、激勵和滿足。</li><li>新皮袋象徵團體的基督，也就是合式盛裝新酒的召會生活。</li></ul><div class="scripture"><b>經文重點：</b>裡面的新生命需要合式的團體器皿；個人享受與身體生活不可分開。</div></div><div class="practice-box"><h4>今天如何經歷？</h4><div class="practice-q">我的基督徒生活只剩責任，還有「新酒」的新鮮和喜樂嗎？</div><p>享受基督會叫人有活力；也需要在弟兄姊妹中彼此供應、彼此盛裝。</p><div class="mini-prayer">主，作我裡面的新酒，也把我保守在健康的身體生活裡。</div></div></div>
+        </details>
+
+        <details class="study" id="study-9">
+          <summary><div class="study-icon">🐑</div><div class="study-title"><b>玖・基督是牧人和莊稼的主</b><span>太 9:35–38</span></div><div class="chev">⌄</div></summary>
+          <div class="study-body"><div class="outline-box"><h4>綱目</h4><ul><li>主看見困苦流離的群眾，就動了慈心，作牧人服事人。</li><li>祂也是莊稼的主；莊稼、工人與工作都屬於祂。</li></ul><div class="scripture"><b>經文重點：</b>主不是只看見「需要處理的問題」，祂看見的是需要牧養的人；而工作真正的主人仍是祂。</div></div><div class="practice-box"><h4>今天如何經歷？</h4><div class="practice-q">我看人是工作量，還是羊？我把服事當自己的責任王國嗎？</div><p>牧養來自慈心；事奉則需要一直承認：「主，你才是莊稼的主。」</p><div class="mini-prayer">主，給我你的慈心，也救我脫離把你的工作抓在自己手中。</div></div></div>
+        </details>
+
+        <details class="study" id="study-10">
+          <summary><div class="study-icon">🤝</div><div class="study-title"><b>拾・基督是罪人的朋友，也是神的智慧</b><span>太 11:19；林前 1:24、30</span></div><div class="chev">⌄</div></summary>
+          <div class="study-body"><div class="outline-box"><h4>綱目</h4><ul><li>祂是罪人的朋友，同情人的難處、體會人的憂傷，卻不有分於罪。</li><li>凡祂所行的都在神的智慧裡；基督自己也成為我們從神所得的智慧。</li></ul><div class="scripture"><b>經文重點：</b>親近人與持守聖別並不衝突；基督的智慧叫我們知道在不同情形中如何合式地顧到人。</div></div><div class="practice-box"><h4>今天如何經歷？</h4><div class="practice-q">面對難相處或犯錯的人，我是先貼標籤，還是先有基督的同情？</div><p>我們不必靠自己的聰明應付複雜關係，可以直接取用基督作智慧。</p><div class="mini-prayer">主，作我的智慧，也使我有你的心來接近並照顧人。</div></div></div>
+        </details>
+
+        <details class="study" id="study-11">
+          <summary><div class="study-icon">🕊️</div><div class="study-title"><b>拾壹・基督是賜安息者</b><span>太 11:28–30；約 4:34</span></div><div class="chev">⌄</div></summary>
+          <div class="study-body"><div class="outline-box"><h4>綱目</h4><ul><li>負主的軛，就是接受父的旨意，受父旨意的約束。</li><li>主總以父的旨意為滿足，所以祂裡面有安息；祂也要我們跟祂學。</li></ul><div class="scripture"><b>經文重點：</b>安息不是「沒有工作」，而是停止與神的旨意爭執；與主同負一軛，擔子就成為可承受的。</div></div><div class="practice-box"><h4>今天如何經歷？</h4><div class="practice-q">現在最叫我疲累的，是事情本身，還是我一直抗拒事情不照我的意思？</div><p>當我們接受主量給的環境，並把重量交給祂，就會從裡面的拉扯進入安息。</p><div class="mini-prayer">主，我接受你的安排。我要與你同負一軛，不再自己扛。</div></div></div>
+        </details>
+
+        <details class="study" id="study-12">
+          <summary><div class="study-icon">🐟</div><div class="study-title"><b>拾貳・基督是更大的約拿</b><span>太 12:39–41；16:4</span></div><div class="chev">⌄</div></summary>
+          <div class="study-body"><div class="outline-box"><h4>綱目</h4><ul><li>約拿預表基督的死、埋葬與復活。</li><li>主給世代最深的記號不是外面的奇事，乃是死而復活的實際。</li></ul><div class="scripture"><b>經文重點：</b>福音的能力不在表演與說服技巧，乃在一位死而復活的基督，以及祂在信徒身上的活出。</div></div><div class="practice-box"><h4>今天如何經歷？</h4><div class="practice-q">遇到衝突時，我願意讓天然反應「死」，讓基督的生命顯出來嗎？</div><p>死而復活不是抽象道理，常常就在我們放下自己、讓主活出的那一刻成為真實。</p><div class="mini-prayer">主，把我帶進你死與復活的實際，叫人從我身上看見你。</div></div></div>
+        </details>
+
+        <details class="study" id="study-13">
+          <summary><div class="study-icon">🍞</div><div class="study-title"><b>拾參・基督是餅，也是桌子下的碎渣</b><span>太 15:21–38</span></div><div class="chev">⌄</div></summary>
+          <div class="study-body"><div class="outline-box"><h4>綱目</h4><ul><li>神的經綸不是外面的事，乃是基督進到我們裡面作食物。</li><li>我們需要藉著「吃」基督，把這位可接受、可享受的基督接受進來。</li></ul><div class="scripture"><b>經文重點：</b>迦南婦人的故事把基督啟示為可吃的餅；後面的餵飽四千人更顯出祂是人的生命供應。</div></div><div class="practice-box"><h4>今天如何經歷？</h4><div class="practice-q">我是在努力模仿主，還是先把主接受進來作我的忍耐、愛與能力？</div><p>基督徒生活的祕訣不是「更努力像耶穌」，乃是「更多吃耶穌」。</p><div class="mini-prayer">主，我天然沒有供應；今天我要接受你作我的餅、我的生命。</div></div></div>
+        </details>
+
+        <details class="study" id="study-14">
+          <summary><div class="study-icon">🌅</div><div class="study-title"><b>拾肆・復活的基督有天上地上所有的權柄</b><span>太 28:18–19</span></div><div class="chev">⌄</div></summary>
+          <div class="study-body"><div class="outline-box"><h4>綱目</h4><ul><li>基督在人性裡作人子、作屬天的王，在復活裡得著天上地上所有的權柄。</li><li>馬太福音關注國度，因此復活在這裡特別顯為權柄的事，使萬民作主的門徒。</li></ul><div class="scripture"><b>經文重點：</b>「所以你們要去」是建立在「所有的權柄都賜給我了」之上；使命不是靠我們自己的膽量。</div></div><div class="practice-box"><h4>今天如何經歷？</h4><div class="practice-q">傳福音、服事人之前，我是否先聯於復活基督的權柄？</div><p>我們可以承認自己的不足，卻不必膽怯，因為我們所聯於的主已在復活裡得著所有權柄。</p><div class="mini-prayer">主，我與你是一。使我不憑自己，乃在你的復活與權柄裡行動。</div></div></div>
+        </details>
+
+        <details class="study" id="study-15">
+          <summary><div class="study-icon">🙌</div><div class="study-title"><b>拾伍・敬拜、享受並經歷這位包羅萬有的基督</b><span>太 2:11；17:5；28:9、17</span></div><div class="chev">⌄</div></summary>
+          <div class="study-body"><div class="outline-box"><h4>綱目</h4><ul><li>馬太福音滿了基督的豐富，祂值得我們敬拜、聽從、享受並經歷。</li><li>重點不在一次記住所有面向，而在其中一些面真正作到我們裡面，成為聚會中的供應與展覽。</li></ul><div class="scripture"><b>經文重點：</b>從博士俯伏敬拜，到變化山上父宣告「要聽祂」，再到復活後門徒敬拜主，整卷書把人帶到基督自己。</div></div><div class="practice-box"><h4>今天如何經歷？</h4><div class="practice-q">這十五項中，這一週哪一項最需要成為我的實際？</div><p>不必一次全部經歷。抓住一項，禱告、操練、在生活中取用，到了聚會就能把真實享受的基督供應出來。</p><div class="mini-prayer">主，不讓這篇只停在我的筆記裡；把你的豐富一點一點作到我裡面。</div></div></div>
+        </details>
+      </div>
+    </div></section>
+
     <section id="lines"><div class="wrap">
-      <div class="section-head"><div class="num">04</div><div><h2>抓住整篇的三條主線</h2><p>十五點很多，但其實可以收斂成三條容易記住的線。</p></div></div>
+      <div class="section-head"><div class="num">05</div><div><h2>抓住整篇的三條主線</h2><p>十五點很多，但其實可以收斂成三條容易記住的線。</p></div></div>
       <div class="three-lines">
         <div class="line-card"><div class="tiny">LINE 01</div><h3>國度</h3><p>從「屬天的王」直到「天上地上所有的權柄」，馬太福音一直把我們帶到基督的掌權之下。祂不只是幫助我的救主，也是我裡面的王。</p></div>
         <div class="line-card"><div class="tiny">LINE 02</div><h3>生命供應</h3><p>光、醫生、新郎、新衣服、新酒、牧人、安息、餅……基督不是外面給一套規條，乃是把祂自己供應到我們裡面。</p></div>
@@ -102,7 +209,7 @@
     </div></section>
 
     <section id="focus"><div class="wrap">
-      <div class="section-head"><div class="num">05</div><div><h2>最適合分享的一條經歷線</h2><p>若要用 5–7 分鐘分享，可以不用十五點全部點名，抓住這三個就很有力。</p></div></div>
+      <div class="section-head"><div class="num">06</div><div><h2>最適合分享的一條經歷線</h2><p>若要用 5–7 分鐘分享，可以不用十五點全部點名，抓住這三個就很有力。</p></div></div>
       <div class="focus">
         <div class="item"><b>👑 王</b><small>接受祂的掌權</small></div><div class="arrow">→</div>
         <div class="item"><b>🕊️ 安息</b><small>接受父的旨意</small></div><div class="arrow">→</div>
@@ -111,7 +218,7 @@
     </div></section>
 
     <section id="application"><div class="wrap">
-      <div class="section-head"><div class="num">06</div><div><h2>把信息帶進日常生活</h2><p>真理落地時，才真正成為我們的構成。</p></div></div>
+      <div class="section-head"><div class="num">07</div><div><h2>把信息帶進日常生活</h2><p>真理落地時，才真正成為我們的構成。</p></div></div>
       <div class="application">
         <div class="app-card"><h3>在工作與家庭裡</h3><ul><li>想控制局面時：讓基督作「溫柔的王」。</li><li>事情不照預期時：經歷祂作「賜安息者」。</li><li>不知道怎麼回應人時：接受祂作「神的智慧」。</li><li>自己耗盡時：吃祂作「生命的餅」。</li></ul></div>
         <div class="app-card"><h3>在聚會與服事裡</h3><ul><li>不是例行公事，而是帶著所享受的基督來聚會。</li><li>不是靠外在推動，而是讓基督作生命的光。</li><li>不是把工作抓在自己手中，而是承認祂是莊稼的主。</li><li>不是只會講道理，而是把實際經歷供應給人。</li></ul></div>
@@ -129,5 +236,13 @@
       <a href="#top">回到頂端 ↑</a>
     </div>
   </div></footer>
+<script>
+function setStudy(opened){
+  document.querySelectorAll('details.study').forEach(d => d.open = opened);
+}
+if(location.hash && location.hash.startsWith('#study-')){
+  const d=document.querySelector(location.hash); if(d) d.open=true;
+}
+</script>
 </body>
 </html>
