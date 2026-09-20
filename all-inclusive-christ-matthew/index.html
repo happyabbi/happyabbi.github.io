@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="第八篇：認識並經歷馬太福音裡包羅萬有的基督 — 綱目與聽抄重點整理" />
+  <meta name="theme-color" content="#132238" />
+  <title>認識並經歷馬太福音裡包羅萬有的基督</title>
+  <style>
+    :root{
+      --ink:#17202d; --muted:#657184; --paper:#f7f4ee; --card:#ffffff;
+      --navy:#132238; --navy2:#203653; --gold:#c69a47; --gold2:#ead7ad;
+      --sage:#718878; --rose:#aa6a63; --line:#e4ded2; --soft:#f1ece2;
+      --shadow:0 18px 50px rgba(20,29,45,.10); --radius:22px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.78}
+    a{color:inherit} .wrap{width:min(1120px,calc(100% - 36px));margin:auto}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(140deg,var(--navy),#1d385d 65%,#40516b);color:#fff;padding:92px 0 70px}
+    .hero:before{content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(234,215,173,.23);border-radius:50%;right:-120px;top:-180px;box-shadow:0 0 0 70px rgba(234,215,173,.04),0 0 0 140px rgba(234,215,173,.025)}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;font-size:.88rem;letter-spacing:.12em;text-transform:uppercase;color:#f3dfb6;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:8px 13px;border-radius:999px}
+    h1{font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;font-size:clamp(2.4rem,6vw,4.7rem);line-height:1.14;letter-spacing:-.035em;margin:22px 0 20px;max-width:930px}
+    .lead{font-size:clamp(1.05rem,2vw,1.27rem);max-width:780px;color:#dce5f0;margin:0 0 28px}
+    .hero-tags{display:flex;flex-wrap:wrap;gap:10px}.hero-tags span{border:1px solid rgba(255,255,255,.18);padding:8px 12px;border-radius:12px;color:#eef3f8;background:rgba(255,255,255,.05)}
+    .topnav{position:sticky;top:0;z-index:20;background:rgba(247,244,238,.93);backdrop-filter:blur(14px);border-bottom:1px solid rgba(23,32,45,.08)}
+    .topnav .wrap{display:flex;gap:10px;overflow:auto;padding:12px 0}.topnav a{white-space:nowrap;text-decoration:none;font-weight:700;font-size:.9rem;padding:7px 10px;border-radius:10px}.topnav a:hover{background:#fff}
+    section{padding:72px 0}.section-head{display:grid;grid-template-columns:100px 1fr;gap:22px;align-items:start;margin-bottom:30px}.num{font-family:Georgia,serif;font-size:3rem;color:var(--gold);line-height:1}.section-head h2{font-size:clamp(1.75rem,4vw,2.7rem);margin:0 0 8px;letter-spacing:-.025em}.section-head p{margin:0;color:var(--muted)}
+    .burden{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px;box-shadow:var(--shadow);position:relative}.burden:before{content:"“";font-family:Georgia,serif;font-size:7rem;line-height:1;position:absolute;right:24px;top:4px;color:#efe5d1}.burden strong{font-family:"Noto Serif TC","Songti TC",serif;font-size:clamp(1.35rem,3vw,2rem);font-weight:700}.burden p{margin-bottom:0;color:var(--muted)}
+    .journey{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 18px;min-height:150px;position:relative}.step .ico{font-size:1.6rem}.step h3{font-size:1.05rem;margin:9px 0 5px}.step p{font-size:.9rem;color:var(--muted);margin:0}.step:not(:last-child):after{content:"→";position:absolute;right:-14px;top:50%;transform:translateY(-50%);z-index:2;background:var(--paper);color:var(--gold);font-size:1.4rem;padding:2px}
+    .aspects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.aspect{background:var(--card);border:1px solid var(--line);border-radius:19px;padding:22px;transition:.2s ease;box-shadow:0 6px 20px rgba(20,29,45,.04)}.aspect:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+    .aspect-top{display:flex;gap:12px;align-items:center}.badge{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:var(--soft);font-size:1.25rem}.aspect h3{font-size:1.08rem;margin:0}.verse{font-size:.82rem;color:#8a6a32;font-weight:800;margin:9px 0 7px}.aspect p{font-size:.93rem;color:var(--muted);margin:0}.aspect .experience{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);font-size:.9rem;color:var(--ink)}
+    .three-lines{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.line-card{border-radius:20px;padding:26px;background:var(--navy);color:white;min-height:235px}.line-card:nth-child(2){background:#536a5b}.line-card:nth-child(3){background:#8a5c55}.line-card .tiny{font-size:.82rem;opacity:.72;letter-spacing:.12em}.line-card h3{font-size:1.45rem;margin:12px 0}.line-card p{margin:0;color:rgba(255,255,255,.83)}
+    .focus{background:linear-gradient(150deg,#fff,#f6efe3);border:1px solid #dfd4c2;border-radius:28px;padding:38px;display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:14px;align-items:center}.focus .item{text-align:center}.focus .item b{display:block;font-size:1.5rem;font-family:"Noto Serif TC",serif}.focus .item small{color:var(--muted)}.arrow{font-size:2rem;color:var(--gold)}
+    .application{display:grid;grid-template-columns:1fr 1fr;gap:22px}.app-card{background:#fff;border-radius:20px;border:1px solid var(--line);padding:28px}.app-card h3{margin-top:0}.app-card ul{margin-bottom:0;padding-left:1.2em}.app-card li{margin:8px 0;color:var(--muted)}
+    .prayer{background:#172a45;color:#fff;border-radius:28px;padding:36px}.prayer h3{font-size:1.6rem;margin-top:0}.prayer p{color:#d9e2ef;margin-bottom:0}.prayer .quote{font-family:"Noto Serif TC",serif;font-size:1.25rem;color:#f5ddb0;border-left:3px solid var(--gold);padding-left:18px;margin-top:22px}
+    footer{padding:40px 0 60px;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)} footer a{color:var(--navy);font-weight:700}
+    .source-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}.source-links a{text-decoration:none;background:#fff;border:1px solid var(--line);padding:8px 10px;border-radius:10px}
+    @media(max-width:850px){.journey{grid-template-columns:1fr 1fr}.step:not(:last-child):after{display:none}.aspects{grid-template-columns:1fr 1fr}.three-lines{grid-template-columns:1fr}.focus{grid-template-columns:1fr}.arrow{transform:rotate(90deg);text-align:center}.application{grid-template-columns:1fr}.section-head{grid-template-columns:65px 1fr}}
+    @media(max-width:560px){.hero{padding:70px 0 54px}.wrap{width:min(100% - 24px,1120px)}section{padding:54px 0}.journey,.aspects{grid-template-columns:1fr}.section-head{grid-template-columns:1fr;gap:4px}.num{font-size:2rem}.burden,.prayer,.focus{padding:24px}}
+    @media print{.topnav{display:none}.hero{padding:40px 0;background:#fff!important;color:#000}.lead,.hero-tags span{color:#222}.hero-tags span{border-color:#aaa}.aspect,.burden,.step,.app-card{box-shadow:none}section{padding:28px 0}}
+  </style>
+</head>
+<body>
+  <header class="hero" id="top">
+    <div class="wrap">
+      <div class="eyebrow">2026 夏季訓練 · 第八篇</div>
+      <h1>認識並經歷馬太福音裡<br>包羅萬有的基督</h1>
+      <p class="lead">不是只知道基督有多少方面，乃是讓祂的豐富成為我們每天的經歷、享受，甚至構成到我們裡面。</p>
+      <div class="hero-tags"><span>國度</span><span>經歷基督</span><span>生命供應</span><span>建造</span><span>馬太福音</span></div>
+    </div>
+  </header>
+
+  <nav class="topnav"><div class="wrap">
+    <a href="#burden">中心負擔</a><a href="#journey">救恩路線</a><a href="#aspects">15 個面向</a><a href="#lines">三條主線</a><a href="#focus">分享重點</a><a href="#application">實際應用</a>
+  </div></nav>
+
+  <main>
+    <section id="burden"><div class="wrap">
+      <div class="section-head"><div class="num">01</div><div><h2>整篇最重要的負擔</h2><p>從「懂道理」往前到「成為經歷」。</p></div></div>
+      <div class="burden"><strong>主所要的，不只是我們會說「基督是包羅萬有的」，而是祂各面的豐富真實地作到我們裡面。</strong><p>我們可能知道祂是王、光、醫生、牧人、新郎、智慧、安息……但真正的問題是：今天在我的工作、家庭、服事與聚會裡，祂是不是實際成為這一位？</p></div>
+    </div></section>
+
+    <section id="journey"><div class="wrap">
+      <div class="section-head"><div class="num">02</div><div><h2>神完整救恩的路線</h2><p>得救不是終點；被帶進基督這「美地」，享受並被祂構成，才是神要帶我們達到的。</p></div></div>
+      <div class="journey">
+        <div class="step"><div class="ico">⛓️</div><h3>出埃及</h3><p>蒙救贖，脫離罪、世界與捆綁。</p></div>
+        <div class="step"><div class="ico">🏜️</div><h3>經過曠野</h3><p>學習信靠，不憑天然自己生活。</p></div>
+        <div class="step"><div class="ico">🌿</div><h3>進入美地</h3><p>進入包羅萬有之基督的豐富。</p></div>
+        <div class="step"><div class="ico">🍞</div><h3>享受基督</h3><p>把祂接受進來，作每天的供應。</p></div>
+        <div class="step"><div class="ico">🏠</div><h3>被祂構成</h3><p>為著神的家、身體與國度的建造。</p></div>
+      </div>
+    </div></section>
+
+    <section id="aspects"><div class="wrap">
+      <div class="section-head"><div class="num">03</div><div><h2>馬太福音裡基督的 15 個面向</h2><p>每一面都不是「考試重點」，而是可以進入的經歷。</p></div></div>
+      <div class="aspects">
+        <article class="aspect"><div class="aspect-top"><div class="badge">👑</div><h3>1. 屬天的王</h3></div><div class="verse">太 2:1–2；21:5</div><p>祂有最高權柄，卻在溫柔、謙卑裡作王。</p><div class="experience"><b>經歷：</b>有責任卻不控制人，讓祂在我裡面掌權。</div></article>
+        <article class="aspect"><div class="aspect-top"><div class="badge">✨</div><h3>2. 基督、活神的兒子</h3></div><div class="verse">太 16:16</div><p>「基督」重在祂的使命；「神的兒子」重在祂的身位。</p><div class="experience"><b>經歷：</b>不只認識祂所作，也接受祂所是。</div></article>
+        <article class="aspect"><div class="aspect-top"><div class="badge">🧍</div><h3>3. 人子</h3></div><div class="verse">太 8:20；16:13</div><p>祂作真正的人，把神的管治權帶到地上。</p><div class="experience"><b>經歷：</b>在試煉、反對中站住得勝之人的地位。</div></article>
+        <article class="aspect"><div class="aspect-top"><div class="badge">🔥</div><h3>4. 施浸者</h3></div><div class="verse">太 3:11</div><p>祂將信祂的人帶進聖靈，進入與三一神生機的聯結。</p><div class="experience"><b>經歷：</b>不是外面加入，乃是在靈裡與祂聯結。</div></article>
+        <article class="aspect"><div class="aspect-top"><div class="badge">💡</div><h3>5. 生命的光</h3></div><div class="verse">太 4:12–16</div><p>祂不是靠外在聲勢，乃是以屬天的大光吸引人。</p><div class="experience"><b>經歷：</b>在黑暗環境中先讓基督照耀，不靠操作氣氛。</div></article>
+        <article class="aspect"><div class="aspect-top"><div class="badge">🩺</div><h3>6. 醫生與新郎</h3></div><div class="verse">太 9:9–15</div><p>祂醫治、點活我們；也要我們愛祂、珍賞祂的同在。</p><div class="experience"><b>經歷：</b>承認自己的病，也享受祂是最可愛的人位。</div></article>
+        <article class="aspect"><div class="aspect-top"><div class="badge">👕</div><h3>7. 新衣服</h3></div><div class="verse">太 9:16；加 3:27</div><p>基督經過死與復活，成為我們的義，使我們蒙神悅納。</p><div class="experience"><b>經歷：</b>不靠自己的好行為站立，乃「穿上基督」。</div></article>
+        <article class="aspect"><div class="aspect-top"><div class="badge">🍷</div><h3>8. 新酒與新皮袋</h3></div><div class="verse">太 9:17；林前 12:12</div><p>基督是振奮人的新生命；召會是盛裝這生命的團體器皿。</p><div class="experience"><b>經歷：</b>裡面享受祂，也在身體生活裡一同盛裝祂。</div></article>
+        <article class="aspect"><div class="aspect-top"><div class="badge">🐑</div><h3>9. 牧人與莊稼的主</h3></div><div class="verse">太 9:35–38</div><p>祂牧養困苦流離的人；工作與莊稼也都屬於祂。</p><div class="experience"><b>經歷：</b>接受牧養，也不把主的工作當成自己的事業。</div></article>
+        <article class="aspect"><div class="aspect-top"><div class="badge">🤝</div><h3>10. 罪人的朋友與神的智慧</h3></div><div class="verse">太 11:19；林前 1:24</div><p>祂親近罪人、同情人的難處，又在各種情形中成為智慧。</p><div class="experience"><b>經歷：</b>不輕看人；遇複雜的人事物時取用祂作智慧。</div></article>
+        <article class="aspect"><div class="aspect-top"><div class="badge">🕊️</div><h3>11. 賜安息者</h3></div><div class="verse">太 11:28–30</div><p>真正安息不是沒有事，而是接受父的旨意，與主同負一軛。</p><div class="experience"><b>經歷：</b>停止和環境拔河，把重擔帶到主面前。</div></article>
+        <article class="aspect"><div class="aspect-top"><div class="badge">🐟</div><h3>12. 更大的約拿</h3></div><div class="verse">太 12:39–41；16:4</div><p>祂是經過死、埋葬與復活的一位。</p><div class="experience"><b>經歷：</b>不靠口才與天然能力，乃活在死而復活的實際裡。</div></article>
+        <article class="aspect"><div class="aspect-top"><div class="badge">🍞</div><h3>13. 餅與桌下的碎渣</h3></div><div class="verse">太 15:21–38</div><p>神的經綸不是外面的改良，乃是基督進到我們裡面作食物。</p><div class="experience"><b>經歷：</b>不是模仿基督，乃把祂「吃」進來作供應。</div></article>
+        <article class="aspect"><div class="aspect-top"><div class="badge">🌅</div><h3>14. 復活且有權柄的一位</h3></div><div class="verse">太 28:18–19</div><p>復活的基督有天上地上所有的權柄，為使萬民作祂的門徒。</p><div class="experience"><b>經歷：</b>傳福音、服事人時，不倚靠自己，乃聯於祂的權柄。</div></article>
+        <article class="aspect"><div class="aspect-top"><div class="badge">🙌</div><h3>15. 敬拜、享受並經歷祂</h3></div><div class="verse">太 2:11；17:5；28:9,17</div><p>馬太福音滿了基督的豐富，最終不是給我們研究，而是給我們享受。</p><div class="experience"><b>經歷：</b>每次聚集不只是履行形式，而是展覽所享受的基督。</div></article>
+      </div>
+    </div></section>
+
+    <section id="lines"><div class="wrap">
+      <div class="section-head"><div class="num">04</div><div><h2>抓住整篇的三條主線</h2><p>十五點很多，但其實可以收斂成三條容易記住的線。</p></div></div>
+      <div class="three-lines">
+        <div class="line-card"><div class="tiny">LINE 01</div><h3>國度</h3><p>從「屬天的王」直到「天上地上所有的權柄」，馬太福音一直把我們帶到基督的掌權之下。祂不只是幫助我的救主，也是我裡面的王。</p></div>
+        <div class="line-card"><div class="tiny">LINE 02</div><h3>生命供應</h3><p>光、醫生、新郎、新衣服、新酒、牧人、安息、餅……基督不是外面給一套規條，乃是把祂自己供應到我們裡面。</p></div>
+        <div class="line-card"><div class="tiny">LINE 03</div><h3>主觀經歷</h3><p>從「基督是智慧」進到「主，你作我的智慧」；從「基督是牧人」進到「主，我需要你牧養我」。真理需要成為經歷。</p></div>
+      </div>
+    </div></section>
+
+    <section id="focus"><div class="wrap">
+      <div class="section-head"><div class="num">05</div><div><h2>最適合分享的一條經歷線</h2><p>若要用 5–7 分鐘分享，可以不用十五點全部點名，抓住這三個就很有力。</p></div></div>
+      <div class="focus">
+        <div class="item"><b>👑 王</b><small>接受祂的掌權</small></div><div class="arrow">→</div>
+        <div class="item"><b>🕊️ 安息</b><small>接受父的旨意</small></div><div class="arrow">→</div>
+        <div class="item"><b>🍞 餅</b><small>接受祂作生命</small></div>
+      </div>
+    </div></section>
+
+    <section id="application"><div class="wrap">
+      <div class="section-head"><div class="num">06</div><div><h2>把信息帶進日常生活</h2><p>真理落地時，才真正成為我們的構成。</p></div></div>
+      <div class="application">
+        <div class="app-card"><h3>在工作與家庭裡</h3><ul><li>想控制局面時：讓基督作「溫柔的王」。</li><li>事情不照預期時：經歷祂作「賜安息者」。</li><li>不知道怎麼回應人時：接受祂作「神的智慧」。</li><li>自己耗盡時：吃祂作「生命的餅」。</li></ul></div>
+        <div class="app-card"><h3>在聚會與服事裡</h3><ul><li>不是例行公事，而是帶著所享受的基督來聚會。</li><li>不是靠外在推動，而是讓基督作生命的光。</li><li>不是把工作抓在自己手中，而是承認祂是莊稼的主。</li><li>不是只會講道理，而是把實際經歷供應給人。</li></ul></div>
+      </div>
+      <div class="prayer" style="margin-top:22px"><h3>可以這樣向主禱告</h3><p>把信息變成簡單、可操練的交通。</p><div class="quote">「主耶穌，我不要只知道你是包羅萬有的。今天在我的環境裡，求你實際作我的王、我的安息、我的智慧和我的生命供應。把你的豐富更多作到我裡面。」</div></div>
+    </div></section>
+  </main>
+
+  <footer><div class="wrap">
+    <strong>第八篇 · 認識並經歷馬太福音裡包羅萬有的基督</strong><br>
+    本頁依據綱目信息與聽抄信息整理，經文以章節索引為主，方便複習與分享。
+    <div class="source-links">
+      <a href="https://mygoodland.notion.site/3a466d91b505802783ede2fe96625574" target="_blank" rel="noopener">聽抄信息 ↗</a>
+      <a href="https://mygoodland.notion.site/3a266d91b50580cabdf4dfb1a7a05601" target="_blank" rel="noopener">綱目信息 ↗</a>
+      <a href="#top">回到頂端 ↑</a>
+    </div>
+  </div></footer>
+</body>
+</html>
