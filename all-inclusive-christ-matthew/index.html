@@ -34,6 +34,19 @@
     .application{display:grid;grid-template-columns:1fr 1fr;gap:22px}.app-card{background:#fff;border-radius:20px;border:1px solid var(--line);padding:28px}.app-card h3{margin-top:0}.app-card ul{margin-bottom:0;padding-left:1.2em}.app-card li{margin:8px 0;color:var(--muted)}
     .prayer{background:#172a45;color:#fff;border-radius:28px;padding:36px}.prayer h3{font-size:1.6rem;margin-top:0}.prayer p{color:#d9e2ef;margin-bottom:0}.prayer .quote{font-family:"Noto Serif TC",serif;font-size:1.25rem;color:#f5ddb0;border-left:3px solid var(--gold);padding-left:18px;margin-top:22px}
 
+
+    .week-route{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;align-items:stretch}
+    .day-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 16px;min-height:210px;box-shadow:0 6px 18px rgba(20,29,45,.04)}
+    .day-card:not(:last-child):after{content:"→";position:absolute;right:-15px;top:50%;transform:translateY(-50%);z-index:3;color:var(--gold);font-size:1.35rem;background:var(--paper);padding:2px}
+    .day-no{font-family:Georgia,serif;font-size:.84rem;color:#8a6a32;letter-spacing:.08em;text-transform:uppercase}
+    .day-card h3{margin:7px 0 10px;font-size:1.05rem}
+    .day-card ul{padding-left:1.1em;margin:0}.day-card li{margin:6px 0;color:var(--muted);font-size:.9rem}
+    .day-verse{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:.82rem;color:#6d5935}
+    .route-summary{margin-top:20px;background:linear-gradient(140deg,#172a45,#274564);color:#fff;border-radius:22px;padding:26px}
+    .route-summary b{color:#f2d8a3}.route-summary p{margin:8px 0 0;color:#dce5ef}
+    @media(max-width:980px){.week-route{grid-template-columns:repeat(3,1fr)}.day-card:not(:last-child):after{display:none}}
+    @media(max-width:620px){.week-route{grid-template-columns:1fr}}
+
     .study-tools{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px}
     .study-tools button{appearance:none;border:1px solid var(--line);background:#fff;color:var(--navy);font-weight:800;padding:9px 14px;border-radius:999px;cursor:pointer}
     .study-tools button:hover{border-color:var(--gold);background:#fffaf0}
@@ -70,7 +83,7 @@
   </header>
 
   <nav class="topnav"><div class="wrap">
-    <a href="#burden">中心負擔</a><a href="#journey">救恩路線</a><a href="#aspects">15 個面向</a><a href="#deep-study">深入研讀</a><a href="#lines">三條主線</a><a href="#focus">分享重點</a><a href="#application">實際應用</a>
+    <a href="#burden">中心負擔</a><a href="#journey">救恩路線</a><a href="#week-route">六日晨興</a><a href="#aspects">15 個面向</a><a href="#deep-study">深入研讀</a><a href="#lines">三條主線</a><a href="#focus">分享重點</a><a href="#application">實際應用</a>
   </div></nav>
 
   <main>
@@ -90,8 +103,30 @@
       </div>
     </div></section>
 
+
+    <section id="week-route"><div class="wrap">
+      <div class="section-head"><div class="num">03</div><div><h2>第八週・六日晨興路線</h2><p>六天不是彼此分散，而是一條從「認識基督」往前到「吃基督、活在復活權柄裡」的經歷路線。</p></div></div>
+      <div class="week-route">
+        <article class="day-card"><div class="day-no">Day 1 · 周一</div><h3>👑 王・基督・活神的兒子</h3><ul><li>基督是屬天的王，在溫柔謙卑裡掌權。</li><li>「基督」說到使命；「活神的兒子」說到身位。</li></ul><div class="day-verse">晨興：太 16:16；21:5</div></article>
+        <article class="day-card"><div class="day-no">Day 2 · 周二</div><h3>🧍 人子・施浸者</h3><ul><li>祂站在真正之人的地位上，帶進神的管治。</li><li>祂把信徒帶進與三一神生機的聯結。</li></ul><div class="day-verse">晨興：太 4:4；3:11</div></article>
+        <article class="day-card"><div class="day-no">Day 3 · 周三</div><h3>💡 生命的光・醫生・新郎</h3><ul><li>基督以生命的光照在死亡的黑暗中。</li><li>祂醫治、點活我們，也要我們愛祂、享受祂。</li></ul><div class="day-verse">晨興：太 4:16；9:11–12</div></article>
+        <article class="day-card"><div class="day-no">Day 4 · 周四</div><h3>👕 新衣服・🍷 新酒與新皮袋</h3><ul><li>基督不是修補舊人，乃成為我們的新衣服。</li><li>祂作新酒在裡面使人有活力，召會作新皮袋盛裝祂。</li></ul><div class="day-verse">晨興：太 9:16–17</div></article>
+        <article class="day-card"><div class="day-no">Day 5 · 周五</div><h3>🐑 牧人・莊稼主・智慧・安息</h3><ul><li>祂牧養人，也是真正工作的主人。</li><li>祂是罪人的朋友、神的智慧與賜安息者。</li></ul><div class="day-verse">晨興：太 9:38；11:29–30</div></article>
+        <article class="day-card"><div class="day-no">Day 6 · 周六</div><h3>🐟 更大的約拿・🍞 餅・復活權柄</h3><ul><li>進入基督死而復活的實際。</li><li>吃基督作生命供應，並在復活的權柄裡往前。</li><li>最終敬拜、享受並經歷這位包羅萬有的基督。</li></ul><div class="day-verse">晨興：太 15:26–27；28:18–19</div></article>
+      </div>
+      <div class="route-summary"><b>六日的推進：</b><p>認識祂是誰 → 聯於祂 → 被祂照耀與醫治 → 穿上祂、享受祂 → 接受祂的牧養、智慧與安息 → 吃祂並活在死而復活與權柄的實際裡。</p></div>
+      <div class="source-links" style="margin-top:16px">
+        <a href="https://mygoodland.notion.site/3a266d91b50580c89e5deae7b831a4b6" target="_blank" rel="noopener">周一 ↗</a>
+        <a href="https://mygoodland.notion.site/3a266d91b505804da363d51c4febe6fa" target="_blank" rel="noopener">周二 ↗</a>
+        <a href="https://mygoodland.notion.site/3a266d91b50580349853cc2475d7b3cf" target="_blank" rel="noopener">周三 ↗</a>
+        <a href="https://mygoodland.notion.site/3a266d91b50580aca0c1f4dddfc72e1d" target="_blank" rel="noopener">周四 ↗</a>
+        <a href="https://mygoodland.notion.site/3a266d91b50580048e53d3ea2c00fa6d" target="_blank" rel="noopener">周五 ↗</a>
+        <a href="https://mygoodland.notion.site/3a266d91b50580eda849c0ffa378e248" target="_blank" rel="noopener">周六 ↗</a>
+      </div>
+    </div></section>
+
     <section id="aspects"><div class="wrap">
-      <div class="section-head"><div class="num">03</div><div><h2>馬太福音裡基督的 15 個面向</h2><p>每一面都不是「考試重點」，而是可以進入的經歷。</p></div></div>
+      <div class="section-head"><div class="num">04</div><div><h2>馬太福音裡基督的 15 個面向</h2><p>每一面都不是「考試重點」，而是可以進入的經歷。</p></div></div>
       <div class="aspects">
         <article class="aspect"><div class="aspect-top"><div class="badge">👑</div><h3>1. 屬天的王</h3></div><div class="verse">太 2:1–2；21:5</div><p>祂有最高權柄，卻在溫柔、謙卑裡作王。</p><div class="experience"><b>經歷：</b>有責任卻不控制人，讓祂在我裡面掌權。</div></article>
         <article class="aspect"><div class="aspect-top"><div class="badge">✨</div><h3>2. 基督、活神的兒子</h3></div><div class="verse">太 16:16</div><p>「基督」重在祂的使命；「神的兒子」重在祂的身位。</p><div class="experience"><b>經歷：</b>不只認識祂所作，也接受祂所是。</div></article>
@@ -113,7 +148,7 @@
 
 
     <section id="deep-study"><div class="wrap">
-      <div class="section-head"><div class="num">04</div><div><h2>十五個面向・深入研讀</h2><p>展開每一項，從綱目進到經文，再轉成今天可以經歷的禱告與操練。</p></div></div>
+      <div class="section-head"><div class="num">05</div><div><h2>十五個面向・深入研讀</h2><p>展開每一項，從綱目進到經文，再轉成今天可以經歷的禱告與操練。</p></div></div>
       <div class="study-index">
         <a href="#study-1">1 王</a><a href="#study-2">2 基督與神子</a><a href="#study-3">3 人子</a><a href="#study-4">4 施浸者</a><a href="#study-5">5 生命的光</a>
         <a href="#study-6">6 醫生與新郎</a><a href="#study-7">7 新衣服</a><a href="#study-8">8 新酒新皮袋</a><a href="#study-9">9 牧人與莊稼主</a>
@@ -200,7 +235,7 @@
     </div></section>
 
     <section id="lines"><div class="wrap">
-      <div class="section-head"><div class="num">05</div><div><h2>抓住整篇的三條主線</h2><p>十五點很多，但其實可以收斂成三條容易記住的線。</p></div></div>
+      <div class="section-head"><div class="num">06</div><div><h2>抓住整篇的三條主線</h2><p>十五點很多，但其實可以收斂成三條容易記住的線。</p></div></div>
       <div class="three-lines">
         <div class="line-card"><div class="tiny">LINE 01</div><h3>國度</h3><p>從「屬天的王」直到「天上地上所有的權柄」，馬太福音一直把我們帶到基督的掌權之下。祂不只是幫助我的救主，也是我裡面的王。</p></div>
         <div class="line-card"><div class="tiny">LINE 02</div><h3>生命供應</h3><p>光、醫生、新郎、新衣服、新酒、牧人、安息、餅……基督不是外面給一套規條，乃是把祂自己供應到我們裡面。</p></div>
@@ -209,7 +244,7 @@
     </div></section>
 
     <section id="focus"><div class="wrap">
-      <div class="section-head"><div class="num">06</div><div><h2>最適合分享的一條經歷線</h2><p>若要用 5–7 分鐘分享，可以不用十五點全部點名，抓住這三個就很有力。</p></div></div>
+      <div class="section-head"><div class="num">07</div><div><h2>最適合分享的一條經歷線</h2><p>若要用 5–7 分鐘分享，可以不用十五點全部點名，抓住這三個就很有力。</p></div></div>
       <div class="focus">
         <div class="item"><b>👑 王</b><small>接受祂的掌權</small></div><div class="arrow">→</div>
         <div class="item"><b>🕊️ 安息</b><small>接受父的旨意</small></div><div class="arrow">→</div>
@@ -218,7 +253,7 @@
     </div></section>
 
     <section id="application"><div class="wrap">
-      <div class="section-head"><div class="num">07</div><div><h2>把信息帶進日常生活</h2><p>真理落地時，才真正成為我們的構成。</p></div></div>
+      <div class="section-head"><div class="num">08</div><div><h2>把信息帶進日常生活</h2><p>真理落地時，才真正成為我們的構成。</p></div></div>
       <div class="application">
         <div class="app-card"><h3>在工作與家庭裡</h3><ul><li>想控制局面時：讓基督作「溫柔的王」。</li><li>事情不照預期時：經歷祂作「賜安息者」。</li><li>不知道怎麼回應人時：接受祂作「神的智慧」。</li><li>自己耗盡時：吃祂作「生命的餅」。</li></ul></div>
         <div class="app-card"><h3>在聚會與服事裡</h3><ul><li>不是例行公事，而是帶著所享受的基督來聚會。</li><li>不是靠外在推動，而是讓基督作生命的光。</li><li>不是把工作抓在自己手中，而是承認祂是莊稼的主。</li><li>不是只會講道理，而是把實際經歷供應給人。</li></ul></div>
