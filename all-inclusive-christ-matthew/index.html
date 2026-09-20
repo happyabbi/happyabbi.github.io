@@ -27,6 +27,17 @@
     section{padding:72px 0}.section-head{display:grid;grid-template-columns:100px 1fr;gap:22px;align-items:start;margin-bottom:30px}.num{font-family:Georgia,serif;font-size:3rem;color:var(--gold);line-height:1}.section-head h2{font-size:clamp(1.75rem,4vw,2.7rem);margin:0 0 8px;letter-spacing:-.025em}.section-head p{margin:0;color:var(--muted)}
     .burden{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px;box-shadow:var(--shadow);position:relative}.burden:before{content:"“";font-family:Georgia,serif;font-size:7rem;line-height:1;position:absolute;right:24px;top:4px;color:#efe5d1}.burden strong{font-family:"Noto Serif TC","Songti TC",serif;font-size:clamp(1.35rem,3vw,2rem);font-weight:700}.burden p{margin-bottom:0;color:var(--muted)}
 
+
+    .mermaid-wrap{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow);overflow:auto}
+    .mermaid-title{display:flex;justify-content:space-between;gap:12px;align-items:end;margin-bottom:14px}
+    .mermaid-title h3{margin:0;font-size:1.25rem}.mermaid-title p{margin:0;color:var(--muted);font-size:.9rem}
+    .mermaid{min-width:860px;text-align:center}
+    .flow-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+    .flow-note{background:#f8f5ee;border:1px solid var(--line);border-radius:14px;padding:14px}
+    .flow-note b{display:block;margin-bottom:4px}
+    .flow-note span{color:var(--muted);font-size:.9rem}
+    @media(max-width:760px){.flow-notes{grid-template-columns:1fr}.mermaid-title{display:block}.mermaid-title p{margin-top:6px}}
+
     .burden-layers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
     .burden-layer{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
     .burden-layer .kicker{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#8a6a32;font-weight:800}
@@ -115,7 +126,7 @@
   </header>
 
   <nav class="topnav"><div class="wrap">
-    <a href="#burden">中心負擔</a><a href="#journey">救恩路線</a><a href="#week-route">六日晨興</a><a href="#daily-content">每日內容</a><a href="#aspects">15 個面向</a><a href="#deep-study">深入研讀</a><a href="#lines">三條主線</a><a href="#focus">分享重點</a><a href="#application">實際應用</a>
+    <a href="#burden">中心負擔</a><a href="#burden-flowchart">Mermaid流程圖</a><a href="#journey">救恩路線</a><a href="#week-route">六日晨興</a><a href="#daily-content">每日內容</a><a href="#aspects">15 個面向</a><a href="#deep-study">深入研讀</a><a href="#lines">三條主線</a><a href="#focus">分享重點</a><a href="#application">實際應用</a>
   </div></nav>
 
   <main>
@@ -131,8 +142,46 @@
       <div class="burden-quote">弟兄姊妹，這篇不是要我們多知道十五個關於基督的名稱，乃是要我們在每天的生活中，一面一面地經歷這位包羅萬有的基督，直到祂不只成為我們所認識的基督，更成為我們所活出的基督。</div>
     </div></section>
 
+
+    <section id="burden-flowchart"><div class="wrap">
+      <div class="section-head"><div class="num">02</div><div><h2>本篇主要負擔・Mermaid 流程圖</h2><p>從客觀認識基督，往前到主觀經歷、享受、被祂構成，最終為著國度與身體的建造。</p></div></div>
+      <div class="mermaid-wrap">
+        <div class="mermaid-title"><h3>從認識基督到活出基督</h3><p>可縮放、可複製、可直接修改流程內容</p></div>
+        <pre class="mermaid">
+flowchart LR
+    A["① 認識基督<br/>看見祂是包羅萬有的一位"]
+    B["② 經歷基督<br/>在日常處境中實際取用祂"]
+    C["③ 享受基督<br/>祂作光、智慧、安息與供應"]
+    D["④ 被基督構成<br/>祂的豐富作到我們裡面"]
+    E["⑤ 活在國度實際裡<br/>讓基督在我們裡面作王"]
+    F["⑥ 為著基督身體的建造<br/>成為神建造的一部分"]
+
+    A --> B --> C --> D --> E --> F
+
+    B -. "工作／家庭／服事" .-> C
+    C -. "吃基督、享受基督" .-> D
+    E -. "不是個人屬靈的終點" .-> F
+
+    classDef know fill:#EAF0F8,stroke:#1F3A5F,color:#132238,stroke-width:2px;
+    classDef life fill:#EDF5EC,stroke:#56745D,color:#25402B,stroke-width:2px;
+    classDef enjoy fill:#FFF5E1,stroke:#B88A2C,color:#6B4D13,stroke-width:2px;
+    classDef build fill:#F4EDE8,stroke:#8F6657,color:#543B31,stroke-width:2px;
+
+    class A know;
+    class B,C,D life;
+    class E enjoy;
+    class F build;
+        </pre>
+        <div class="flow-notes">
+          <div class="flow-note"><b>一、認識</b><span>先看見基督是王、人子、生命的光、醫生、新郎、牧人、智慧、安息與餅。</span></div>
+          <div class="flow-note"><b>二、經歷</b><span>不是只會說「基督是」，乃是在每天的環境中說「主，你作我的……」。</span></div>
+          <div class="flow-note"><b>三、建造</b><span>享受基督不是停在個人得幫助，乃是被祂構成，為著國度與基督身體。</span></div>
+        </div>
+      </div>
+    </div></section>
+
     <section id="journey"><div class="wrap">
-      <div class="section-head"><div class="num">02</div><div><h2>神完整救恩的路線</h2><p>得救不是終點；被帶進基督這「美地」，享受並被祂構成，才是神要帶我們達到的。</p></div></div>
+      <div class="section-head"><div class="num">03</div><div><h2>神完整救恩的路線</h2><p>得救不是終點；被帶進基督這「美地」，享受並被祂構成，才是神要帶我們達到的。</p></div></div>
       <div class="journey">
         <div class="step"><div class="ico">⛓️</div><h3>出埃及</h3><p>蒙救贖，脫離罪、世界與捆綁。</p></div>
         <div class="step"><div class="ico">🏜️</div><h3>經過曠野</h3><p>學習信靠，不憑天然自己生活。</p></div>
@@ -144,7 +193,7 @@
 
 
     <section id="week-route"><div class="wrap">
-      <div class="section-head"><div class="num">03</div><div><h2>第八週・六日晨興路線</h2><p>六天不是彼此分散，而是一條從「認識基督」往前到「吃基督、活在復活權柄裡」的經歷路線。</p></div></div>
+      <div class="section-head"><div class="num">04</div><div><h2>第八週・六日晨興路線</h2><p>六天不是彼此分散，而是一條從「認識基督」往前到「吃基督、活在復活權柄裡」的經歷路線。</p></div></div>
       <div class="week-route">
         <article class="day-card"><div class="day-no">Day 1 · 周一</div><h3>👑 王・基督・活神的兒子</h3><ul><li>基督是屬天的王，在溫柔謙卑裡掌權。</li><li>「基督」說到使命；「活神的兒子」說到身位。</li></ul><div class="day-verse">晨興：太 16:16；21:5</div></article>
         <article class="day-card"><div class="day-no">Day 2 · 周二</div><h3>🧍 人子・施浸者</h3><ul><li>祂站在真正之人的地位上，帶進神的管治。</li><li>祂把信徒帶進與三一神生機的聯結。</li></ul><div class="day-verse">晨興：太 4:4；3:11</div></article>
@@ -166,7 +215,7 @@
 
 
     <section id="daily-content"><div class="wrap">
-      <div class="section-head"><div class="num">04</div><div><h2>周一～周六・晨興內容整理</h2><p>把每天的綱目與信息選讀收斂成「真理 → 亮光 → 經歷 → 禱告」，方便直接晨興或預備分享。</p></div></div>
+      <div class="section-head"><div class="num">05</div><div><h2>周一～周六・晨興內容整理</h2><p>把每天的綱目與信息選讀收斂成「真理 → 亮光 → 經歷 → 禱告」，方便直接晨興或預備分享。</p></div></div>
       <div class="daily-study">
 
         <details class="daily" open>
@@ -245,7 +294,7 @@
     </div></section>
 
     <section id="aspects"><div class="wrap">
-      <div class="section-head"><div class="num">05</div><div><h2>馬太福音裡基督的 15 個面向</h2><p>每一面都不是「考試重點」，而是可以進入的經歷。</p></div></div>
+      <div class="section-head"><div class="num">06</div><div><h2>馬太福音裡基督的 15 個面向</h2><p>每一面都不是「考試重點」，而是可以進入的經歷。</p></div></div>
       <div class="aspects">
         <article class="aspect"><div class="aspect-top"><div class="badge">👑</div><h3>1. 屬天的王</h3></div><div class="verse">太 2:1–2；21:5</div><p>祂有最高權柄，卻在溫柔、謙卑裡作王。</p><div class="experience"><b>經歷：</b>有責任卻不控制人，讓祂在我裡面掌權。</div></article>
         <article class="aspect"><div class="aspect-top"><div class="badge">✨</div><h3>2. 基督、活神的兒子</h3></div><div class="verse">太 16:16</div><p>「基督」重在祂的使命；「神的兒子」重在祂的身位。</p><div class="experience"><b>經歷：</b>不只認識祂所作，也接受祂所是。</div></article>
@@ -267,7 +316,7 @@
 
 
     <section id="deep-study"><div class="wrap">
-      <div class="section-head"><div class="num">06</div><div><h2>十五個面向・深入研讀</h2><p>展開每一項，從綱目進到經文，再轉成今天可以經歷的禱告與操練。</p></div></div>
+      <div class="section-head"><div class="num">07</div><div><h2>十五個面向・深入研讀</h2><p>展開每一項，從綱目進到經文，再轉成今天可以經歷的禱告與操練。</p></div></div>
       <div class="study-index">
         <a href="#study-1">1 王</a><a href="#study-2">2 基督與神子</a><a href="#study-3">3 人子</a><a href="#study-4">4 施浸者</a><a href="#study-5">5 生命的光</a>
         <a href="#study-6">6 醫生與新郎</a><a href="#study-7">7 新衣服</a><a href="#study-8">8 新酒新皮袋</a><a href="#study-9">9 牧人與莊稼主</a>
@@ -354,7 +403,7 @@
     </div></section>
 
     <section id="lines"><div class="wrap">
-      <div class="section-head"><div class="num">07</div><div><h2>抓住整篇的三條主線</h2><p>十五點很多，但其實可以收斂成三條容易記住的線。</p></div></div>
+      <div class="section-head"><div class="num">08</div><div><h2>抓住整篇的三條主線</h2><p>十五點很多，但其實可以收斂成三條容易記住的線。</p></div></div>
       <div class="three-lines">
         <div class="line-card"><div class="tiny">LINE 01</div><h3>國度</h3><p>從「屬天的王」直到「天上地上所有的權柄」，馬太福音一直把我們帶到基督的掌權之下。祂不只是幫助我的救主，也是我裡面的王。</p></div>
         <div class="line-card"><div class="tiny">LINE 02</div><h3>生命供應</h3><p>光、醫生、新郎、新衣服、新酒、牧人、安息、餅……基督不是外面給一套規條，乃是把祂自己供應到我們裡面。</p></div>
@@ -363,7 +412,7 @@
     </div></section>
 
     <section id="focus"><div class="wrap">
-      <div class="section-head"><div class="num">08</div><div><h2>最適合分享的一條經歷線</h2><p>若要用 5–7 分鐘分享，可以不用十五點全部點名，抓住這三個就很有力。</p></div></div>
+      <div class="section-head"><div class="num">09</div><div><h2>最適合分享的一條經歷線</h2><p>若要用 5–7 分鐘分享，可以不用十五點全部點名，抓住這三個就很有力。</p></div></div>
       <div class="focus">
         <div class="item"><b>👑 王</b><small>接受祂的掌權</small></div><div class="arrow">→</div>
         <div class="item"><b>🕊️ 安息</b><small>接受父的旨意</small></div><div class="arrow">→</div>
@@ -372,7 +421,7 @@
     </div></section>
 
     <section id="application"><div class="wrap">
-      <div class="section-head"><div class="num">09</div><div><h2>把信息帶進日常生活</h2><p>真理落地時，才真正成為我們的構成。</p></div></div>
+      <div class="section-head"><div class="num">10</div><div><h2>把信息帶進日常生活</h2><p>真理落地時，才真正成為我們的構成。</p></div></div>
       <div class="application">
         <div class="app-card"><h3>在工作與家庭裡</h3><ul><li>想控制局面時：讓基督作「溫柔的王」。</li><li>事情不照預期時：經歷祂作「賜安息者」。</li><li>不知道怎麼回應人時：接受祂作「神的智慧」。</li><li>自己耗盡時：吃祂作「生命的餅」。</li></ul></div>
         <div class="app-card"><h3>在聚會與服事裡</h3><ul><li>不是例行公事，而是帶著所享受的基督來聚會。</li><li>不是靠外在推動，而是讓基督作生命的光。</li><li>不是把工作抓在自己手中，而是承認祂是莊稼的主。</li><li>不是只會講道理，而是把實際經歷供應給人。</li></ul></div>
@@ -398,5 +447,22 @@ if(location.hash && location.hash.startsWith('#study-')){
   const d=document.querySelector(location.hash); if(d) d.open=true;
 }
 </script>
+
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+  mermaid.initialize({
+    startOnLoad: true,
+    securityLevel: "loose",
+    theme: "base",
+    themeVariables: {
+      fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif',
+      primaryTextColor: "#17202d",
+      lineColor: "#9a7a3a",
+      tertiaryColor: "#f7f4ee"
+    },
+    flowchart: { curve: "basis", htmlLabels: true }
+  });
+</script>
+
 </body>
 </html>
